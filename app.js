@@ -11,15 +11,15 @@ app.use(cors())
 app.disable('x-powered-by')
 app.disable('etag')
 
-// const {
-//   authRouter,
-//   usersRouter,
-//   projectsRouter
-// } = require('./routes')
+const {
+  authRouter,
+  usersRouter,
+  projectsRouter
+} = require('./routes')
 
-// app.use('/api/auth', authRouter)
-// app.use('/api/users', usersRouter)
-// app.use('/api/projects', projectsRouter)
+app.use('/api/auth', authRouter)
+app.use('/api/users', usersRouter)
+app.use('/api/projects', projectsRouter)
 
 app.use((req, res) => {
   const status = 404
