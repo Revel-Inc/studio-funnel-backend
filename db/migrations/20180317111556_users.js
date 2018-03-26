@@ -4,6 +4,9 @@ exports.up = function(knex, Promise) {
     table.increments()
     table.string('fname').notNullable().defaultTo('')
     table.string('lname').notNullable().defaultTo('')
+    table.string('key_role').notNullabe().defaulTo('')
+    table.boolean('admin').notNullable().defaultTo(false)
+    table.boolean('active').notNullabe().defaulTo(true)
     table.timestamps(true, true)
   })
 };
